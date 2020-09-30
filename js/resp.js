@@ -2,6 +2,7 @@ burger = document.querySelector('.burger')
 navbar = document.querySelector('.navbar')
 navList = document.querySelector('.nav-list')
 rightNav = document.querySelector('.rightNav')
+const myform = document.getElementById("myform")
 
 
 burger.addEventListener('click',()=>{
