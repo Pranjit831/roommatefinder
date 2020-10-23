@@ -86,10 +86,13 @@ position: relative;
 box-shadow: 0px 5px 50px 0px #db3838, 0px 0px 0px 7px rgba(238, 6, 6, 0.5);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
 .profile-card__img {
 width: 120px;
 height: 120px;
+border-radius: 50px;
+margin-left: auto;
+margin-top: auto;
 }
 }
 
@@ -144,6 +147,7 @@ min-width: 120px;
 .profile-card-inf__item {
 padding: 10px 20px;
 min-width: 120px;
+border-radius: 50px;
 }
 }
 
