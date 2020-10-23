@@ -3,17 +3,52 @@
 <head>
 	<title>Sign in</title>
 	<link rel="stylesheet" type="text/css" href="css/login_style.css">
+
+	<script>
+		
+		function onChangeData()
+		{
+			var name=document.forms["Details"]["Username"].value;
+			var pass=document.forms["Details"]["Password"].value;
+			console.log(name+ " "+pass);
+			if(name=="" && pass=="")
+			{
+				alert("The name and password can't be empty");				
+				return false;
+			}
+			else if(name=="")
+			{
+				alert("Name cann't be empty");
+				return false;
+			}
+			else if(pass=="")
+			{
+				alert("Password cann't be empty");
+				return false;
+			}
+			else if((name!="xyz@gmail.com" && pass!="12345")||(name=="xyz@gmail.com" && pass!="12345")||(name!="xyz@gmail.com" && pass=="12345"))
+			{
+				alert("Invalid Username and Password");
+				return false;
+			}
+			
+			
+		}
+		
+
+	</script>
 </head>
+
 <body>
 	<div class="loginbox">
 		<img src="img/avatar.png" class="logo">
 		<h1>Login Here</h1>
-		<form>
+		<form name="Details" action="AfterLogin.html" onsubmit="return onChangeData() ">
 			<p>Username</p>
-			<input type="text" name="" placeholder="Enter Username">
+			<input type="text" name="Username" placeholder="Enter Username">
 			<p>Password</p>
-			<input type="password" name="" placeholder="Enter Password">
-			<input type="submit" name="" value="Login">
+			<input type="password" name="Password" placeholder="Enter Password">
+			<input  type="submit" name="" value="Login">
 			<a href="#">Lost your password?</a><br>
 			<a href="#">Don't have an account?</a>
 		</form>
