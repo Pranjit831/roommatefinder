@@ -2,7 +2,7 @@ burger = document.querySelector('.burger')
 navbar = document.querySelector('.navbar')
 navList = document.querySelector('.nav-list')
 rightNav = document.querySelector('.rightNav')
-const myform = document.getElementById("myform")
+const myform = document.getElementById("submit")
 
 burger.addEventListener('click',()=>{
 	rightNav.classList.toggle('v-class-resp');
